@@ -4,8 +4,6 @@ services:
   n8n:
     image: n8nio/n8n:latest
     restart: always
-    env_file:
-      - .env
     volumes:
       - n8n_data:/home/node/.n8n
     labels:
@@ -22,3 +20,4 @@ volumes:
 networks:
   proxy:
     external: true
+
